@@ -1,0 +1,46 @@
+//check workspace
+terraform workspace list
+
+//Create new  workspace
+terraform workspace new production
+
+//selct workspace
+terraform workspace select production
+
+
+
+************Prod Workspace creation
+
+terraform workspace select production
+// init
+terraform init
+// plan
+terraform plan --var-file=environments/terraform-prod.tfvars
+// apply
+terraform apply --var-file=environments/terraform-prod.tfvars
+
+
+// init
+terraform init
+// plan
+terraform plan --var-file=environments/terraform-dev.tfvars
+// apply
+terraform apply --var-file=environments/terraform-dev.tfvars
+
+//destroy
+terraform destroy --var-file=environments/terraform-dev.tfvars
+
+
+
+// switch to qa workspace
+terraform workspace select qa
+// init
+terraform init
+// plan
+terraform plan --var-file=environments/terraform-qa.tfvars
+// apply
+terraform apply --var-file=environments/terraform-qa.tfvars
+
+//destroy
+terraform destroy --var-file=environments/terraform-qa.tfvars
+

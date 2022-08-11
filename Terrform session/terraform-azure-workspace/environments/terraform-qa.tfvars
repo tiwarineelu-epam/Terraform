@@ -1,0 +1,5 @@
+location="eastus"
+rg-name="rg-multienv-demo-qa"
+storage-account-name="staticdemowebsitestqa"
+index_document="index.html"
+source_url="index.html"
